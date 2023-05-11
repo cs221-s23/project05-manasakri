@@ -1,0 +1,40 @@
+Student,Port number
+"Acquaye, Kwasi",8000
+"Anderson Jr, Lamar",8004
+"Bair, Marlon",8008
+"Benitez, Jonathan",8012
+"Bhatia, Ravneet",8016
+"Brenengen, Alice",8020
+"Brown, Jeremiah",8024
+"Coley, Rachel",8028
+"DeThomas, Eva",8032
+"Dharma, Jonathan",8036
+"Diep, Andrew",8040
+"Elston, Ryan",8044
+"Gordon, Dexter",8048
+"Haroon-Ahmed, Alaa",8052
+"Jamison, Emmett",8056
+"Jaramillo Franzoni, Santiago",8060
+"Krishnan, Manasa",8064
+"Lach, Amelia",8068
+"Leon, Alexander",8072
+"Liu, Andrew",8076
+"Mathur, Riya",8080
+"Meltsner, Isaac",8084
+"Nair, Ria",8088
+"Park, Joon",8092
+"Perry, Peter",8096
+"Pradhan, Evana",8100
+"Regalado, Annabelle",8104
+"Sahota, Harvir",8108
+"Srinivas, Chandana",8112
+"Tam, Chris",8116
+"Tandoc, Angela",8120
+"Taylor, Lorenzo Marlando",8124
+"Thomas, Dante",8128
+"Villarreal-Blozis, Maximiliano",8132
+"Wang, Emmanuel",8136
+"Yniguez, Leonardo",8140
+"Zhou, Erfei",8144
+"Zhou, Yiyu",8148
+"Zhu, Bingjie",8152
