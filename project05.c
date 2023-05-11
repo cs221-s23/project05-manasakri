@@ -116,11 +116,13 @@ int main(int argc, char **argv)
 
     printf("Starting http server in port:%d\n", port); //error check message to see if port connected  
 
-    int server_socket = create_and_bind_socket(port);
+    int server_socket = create_and_bind_socket(port); 
+    // listener socket is added to poll with POLLIN...
 
-    struct pollfd pollfds[MAX_CLIENTS + 1]; //POLL command 
+    struct pollfd pollfds[MAX_CLIENTS + 1];   // monitors for POLLIN events on all sockets in polls()
+    
     pollfds[0].fd = server_socket;
-    pollfds[0].events = POLLIN ;
+    pollfds[0].events = POLLIN ;    
     int useClient = 0; //initializing to 0 
     int client_socket = 0; //initializing to 0 
 
@@ -136,17 +138,20 @@ int main(int argc, char **argv)
                         struct sockaddr_in cliaddr;
                         int addrlen = sizeof(cliaddr); //passing sizeof  cliaddr struct to addrlen 
                         client_socket = accept(server_socket, (struct sockaddr *) &cliaddr, &addrlen); //accept function runs 
-
+						
                         printf("creating new client socket\n");
                         pollfds[i].fd = client_socket;
                         pollfds[i].events = POLLIN;
                         useClient++;
                     }
-
+                    
+					//handle the incoming connection when there is POLLIN event on the listener socket
+					
+					//handle the HTTP request  when there is POLLIN event on the accepted socket...
                     if (pollfds[i].fd > 0 && pollfds[i].revents & POLLIN) {
                         char buf[SIZE];
                         int bufSize = read(pollfds[i].fd, buf, 1024);
-
+						
                         if (bufSize == -1 || bufSize == 0) { //bufsize error check code 
                             pollfds[i].fd = 0;
                             pollfds[i].events = 0;
